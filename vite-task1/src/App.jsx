@@ -4,11 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
+  // Декларативный стиль: определяем состояние и используем хук useState
   const [count, setCount] = useState(0)
-
+  // Декларативный стиль: определяем состояние и используем хук useState
+  const currentYear = new Date().getFullYear();
   return (
     <>
       <div>
+        {/* Декларативный стиль: структура разметки задаётся декларативно */}
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -18,6 +21,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
+        {/* Декларативный стиль: указываем событие onClick и обновляем состояние */}
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
@@ -28,6 +32,10 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      {/* Декларативный стиль: вставляем значение текущего года */}
+      <footer>
+	      <p> {currentYear} </p>
+      </footer>
     </>
   )
 }
